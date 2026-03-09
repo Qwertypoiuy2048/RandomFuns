@@ -1,11 +1,11 @@
 public class Surge
 {
     public char _severity;
-    public string _type;
+    public char _type;
     public string _description;
     public int _line;
 
-    public Surge(char severity, string type, string description, int line)
+    public Surge(char severity, char type, string description, int line)
     {
         _severity = severity;
         _type = type;

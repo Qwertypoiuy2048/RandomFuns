@@ -2,7 +2,7 @@ import csv
 # effects = {'H1': 0, 'H2': 0, 'H3': 0, 'H4': 0, 'V1': 0, 'V2': 0, 'V3': 0, 'V4': 0, 'B1': 0, 'B2': 0, 'B3': 0, 'B4': 0}
 effects = {'H1': 0, 'V1': 0, 'B1': 0, 'H2': 0, 'V2': 0, 'B2': 0, 'H3': 0, 'V3': 0, 'B3': 0, 'H4': 0, 'V4': 0, 'B4': 0}
 
-with open('C:/Users/ehcre/.vscode/projects/helpful_functions/WMS.csv', 'r', encoding='utf-8') as f:
+with open('C:/Users/ehcre/.vscode/projects/MyProjects/WMS.csv', 'r', encoding='utf-8') as f:
 
     surges = []
     for line in f:
