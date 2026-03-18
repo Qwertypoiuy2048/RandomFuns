@@ -87,7 +87,7 @@ print(f"Total all: {total_all}")
 
 """
 +20 H
-+5 1
++3 1
 +5 2
-+10 3
++8 3
 """
