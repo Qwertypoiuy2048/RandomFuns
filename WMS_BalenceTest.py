@@ -86,8 +86,81 @@ print(f"Total all: {total_all}")
 
 
 """
-+20 H
-+3 1
-+5 2
-+8 3
+Effect counts:
+
+H2: 28
+V2: 68
+B2: 46
+Total 2: 142
+
+H3: 48
+V3: 92
+B3: 53
+Total 3: 193
+
+H4: 11
+V4: 9
+B4: 15
+Total 4: 35
+
+B1: 25
+B2: 46
+B3: 53
+B4: 15
+Total B: 139
+
+V1: 37
+V2: 68
+V3: 92
+V4: 9
+Total V: 206
+
+H1: 28
+H2: 28
+H3: 48
+H4: 11
+Total H: 115
+
+Total H: 115
+Total V: 206
+Total B: 139
+Total 1: 90
+Total 2: 142
+Total 3: 193
+Total 4: 35
+
+Total all: 460
+
+Empower Chaos:
+V3: 92
+V4: 9
+Total: 101
+1-4 surges from this table
+
+Crystal Clusters:
+H2: 28
+V2: 68
+Total 2: 96
+
+H3: 48
+V3: 92
+Total 3: 140
+
+Sum total: 236
+1-2 surges from this table
+
+
+Cloak of Flickering Reality:
+H1: 28
+V1: 37
+B1: 25
+Total 1: 90
+
+H2: 28
+V2: 68
+B2: 46
+Total 2: 142
+
+Sum total: 232
+1 surge from this table
 """

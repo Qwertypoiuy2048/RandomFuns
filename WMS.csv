@@ -61,8 +61,8 @@ B,3,For 1d6 rounds the triggering creature gains resistance to damage from spell
 B,2,For 1d6 rounds the triggering creature gains +2 AC against ranged attacks.
 H,3,A bolt of raw magic strikes the triggering creature for 4d8 force damage.
 V,4,A CR 5 magical beast appears within 30 feet and immediately attacks the nearest creature. It remains for 3d6 rounds.
-V,1,The triggering creature permanently smells faintly of ozone. Detectable within 5 ft.
-V,1,For 1d6 hours faint whispers echo around the triggering creature when they cast a spell.
+H,1,The triggering creature permanently smells faintly of ozone. Detectable within 5 ft.
+H,1,For 1d6 hours faint whispers echo around the triggering creature when they cast a spell.
 V,2,For 1d8 rounds small flames flicker in a 15-ft radius; creatures moving more than 10 ft take 1d4 fire damage.
 V,3,Four CR 1 creatures appear in unoccupied spaces within 30 ft for 1d6 minutes.
 V,2,For 1d8 rounds creatures within 20 ft must succeed on a Wis save against your casting DC to willingly move closer to the triggering creature.
@@ -70,7 +70,7 @@ V,1,For 1d6 minutes colors within 30 ft are over saturated and slightly distorte
 V,3,For 1d4 rounds lightning arcs between two random creatures within 30 ft each round (3d6 lightning damage Dex save for half).
 V,2,For 1d10 rounds all creatures within 15 ft grow or shrink 10% in size.
 V,3,A CR 5 monstrosity appears within 30 ft for 3d6 rounds.
-V,1,For 1d6 hours the triggering creature hears faint applause after dealing damage.
+B,1,For 1d6 hours the triggering creature hears faint applause after dealing damage.
 H,2,All treasure carried by the caster becomes sentient sprouts tiny arms and legs and tries to escape from them.
 B,2,For 1d8 rounds the triggering creature gains advantage on Concentration checks.
 V,2,For 1d6 rounds rain falls in a 20-ft radius; the area becomes lightly obscured.
@@ -110,7 +110,7 @@ V,1,A swarm of glowing moths fills a 10-ft radius for 1d6 minutes (lightly obscu
 V,2,Three CR 1 creatures appear stacked vertically in one space and immediately fall prone.
 V,1,A single animated chair appears for 1d6 minutes and attempts to follow the nearest creature.
 V,2,1d8 CR 0 creatures appear in a 15-ft radius and scatter immediately.
-V,1,Caster is immune to being intoxicated by alcohol for the next 3d10 days
+B,1,Caster is immune to being intoxicated by alcohol for the next 3d10 days
 V,2,Four CR 1/8 creatures appear and move in perfect formation.
 V,1,A single harmless elemental sprite appears and mimics gestures.
 V,3,Two CR 2 creatures appear within 30 ft for 3d6 rounds.
@@ -118,7 +118,7 @@ V,1,A rain of rubber ducks falls in a 10-ft radius (difficult terrain for 1 roun
 V,2,Three CR 1 beasts appear and immediately flee in random directions.
 V,1,A friendly ghost dog appears for 1d6 minutes.
 V,2,1d4 CR 1 creatures appear but refuse to move unless attacked.
-V,1,A small mimic appears disguised as a mundane object.
+H,1,A small mimic appears disguised as a mundane object.
 V,2,Three CR 1/2 creatures appear in a triangle formation within 30 ft for 1d6 minutes.
 V,2,For 1d8 rounds enemies within 20 ft hear false tactical advice.
 V,4,For 1d4 rounds all healing within 30 ft deals damage instead and vice versa.
@@ -159,7 +159,7 @@ V,2,For 1d10 rounds creatures within 30 ft hear faint mocking laughter on missed
 V,3,For 1d4 rounds all movement speeds are halved.
 B,3,For 1d4 rounds movement speeds of all hostile creatures are halved.
 H,3,For 1d4 rounds movement speeds of all friendly creatures are halved.
-V,1,For 1d6 hours the triggering creature leaves illusory footprints.
+H,1,For 1d6 hours the triggering creature leaves illusory footprints.
 B,3,The triggering creature regains 6d10 HP.
 V,2,For 1d8 rounds small stones orbit the triggering creature granting half cover vs ranged attacks.
 H,4,The triggering creature becomes the center of a 20-ft radius fire explosion (10d6 fire damage Dex save for half).
@@ -233,8 +233,8 @@ V,1,Caster gains the ability to walk on water but only for the first six steps.
 V,3,The caster lays a clutch of eggs during the next extended rest. What hatches follow the caster around and treats them as their mother.
 V,1,The caster can now communicate conversationally with ducks.
 H,1,The party is plagued by voices in their head. The voice sounds exactly like each PCs mother and criticizes and chastises everything they do for 1d4 weeks. Things such as “Oh why would you kill that poor goblin? What did he do to you?” and “You need to wipe your feet before going into an inn! Where are your manners?”
-V,1,Whenever the caster is hurt a blast of confetti shoots out of their ears accompanied by the sound of a party noise  maker
-V,1,The next creature to come in physical contact with the caster becomes instantly covered in black sticky tar.
+V,1,Whenever the caster is hurt a blast of confetti shoots out of their ears accompanied by the sound of a party noise maker
+H,1,The next creature to come in physical contact with the caster becomes instantly covered in black sticky tar.
 H,3,The next item the caster touches becomes stuck to their hand as though held there by Sovereign Glue (see Dungeon Masters Guide). However it may be removed by Dispel Magic or Remove Curse.
 B,1,The caster gains eat-vision. By staring at food or drink they can focus their energy and eat/drink it from up to 100 feet away. While using this ability their eyes glow white and there is a faint smell of burning flesh around them.
 V,1,Whenever the caster enters a building the amount of light available dims to darkness and then a spotlight of bright light appears around the caster (accompanied with trumpet sounds). Then the light returns to normal immediately afterward.
@@ -247,7 +247,7 @@ V,3,Vines sprout from the ground and restrain any creatures in a 30 foot sphere 
 B,2,A random shoe within 20 feet of the caster gains the properties of a bag of holding.
 V,1,For the rest of the current encounter or the next encounter the PCs face the encounter is accompanied by a disembodied voice giving a play-by-play.
 B,3,Each step the caster takes causes a small burst of magical energy from beneath their feet that cycles through the following types: fire cold acid and lightning. This energy allows them to walk on air.
-V,1,A small parrot appears and begins following the party around and annoyingly copying phrases they say. The parrot has a mocking tone and if killed resurrects 3d8 hours later and resumes its copying.
+H,1,A small parrot appears and begins following the party around and annoyingly copying phrases they say. The parrot has a mocking tone and if killed resurrects 3d8 hours later and resumes its copying.
 H,3,The next spell the caster casts has the opposite effect. The way the spell manifests is up to the DM. For example the spell Fireball may instead be a ball of ice and do cold damage or perhaps instead the spell heals the creatures in burst instead of damaging.
 V,1,A goblin appears and claims to be the slave of the caster. The goblin will not under any circumstance leave the casters side.
 B,3,A random item in the partys inventory gains the same properties of a magic item from the Dungeon Masters Guide (Players choice which item DM chooses enchantment).
@@ -272,7 +272,7 @@ B,3,You cast Magic Missile as a 6th-level spell.
 B,3,You cast Wall of Sand centered on yourself.
 B,3,You disappear in a pillar of flame and teleport up to 60 feet to an unoccupied space of your choice that you can see reappearing in a similar pillar.
 B,3,For the next 2d10 rounds you can teleport up to 20 feet as a bonus action on each of your turns. When you appear in the new location you create a burst of thunderous sound which can be heard 100 feet away.
-B,1,You regain your lowest-level expended spell slot.
+B,2,You regain your lowest-level expended spell slot.
 B,3,The next time you are damaged by necrotic damage you are instead healed that much health.
 V,2,You deal 1d10 necrotic to all creatures within in 30 of you and gain that much health.
 B,4,Choose one immortality trait (no aging / food / drink / air).
@@ -368,7 +368,7 @@ V,3,For 1d4 rounds creatures within 30 ft must succeed on a Wis save at the star
 H,3,A 20-ft radius burst of necrotic energy erupts centered on the triggering creature (6d10 necrotic Con save half).
 H,3,Three CR 2 creatures appear within 30 ft and act independently for 3d6 rounds.
 V,3,For 1d4 rounds all creatures within 30 ft have disadvantage on attack rolls.
-V,1,For 1d4 rounds the triggering creatures speed fluctuates wildly. At the start of each of their turns roll 1d4: 1-2: speed halved 3-4: speed doubled
+V,2,For 1d4 rounds the triggering creatures speed fluctuates wildly. At the start of each of their turns roll 1d4: 1-2: speed halved 3-4: speed doubled
 H,1,For 1d6 rounds the triggering creature cannot take reactions.
 H,1,For 1d4 rounds the triggering creature must use their movement before taking an action on their turn.
 H,1,For 1d8 rounds the triggering creature subtracts 1d4 from their initiative count each round.
