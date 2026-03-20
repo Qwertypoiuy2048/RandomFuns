@@ -20,7 +20,7 @@ class Rollable : Surge
 
     public int Roll()
     {
-        return dice.Roll(diceNum, diceType) + bonus;
+        return _dice.Roll(_diceNum, _diceType) + _bonus;
     }
 
     public override void Display()

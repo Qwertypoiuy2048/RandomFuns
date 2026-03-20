@@ -12,3 +12,4 @@ C:\Users\ehcre\.vscode\projects\MyProjects\WMS_V2\obj\Debug\net10.0\refint\WMS_V
 C:\Users\ehcre\.vscode\projects\MyProjects\WMS_V2\obj\Debug\net10.0\WMS_V2.pdb
 C:\Users\ehcre\.vscode\projects\MyProjects\WMS_V2\obj\Debug\net10.0\WMS_V2.genruntimeconfig.cache
 C:\Users\ehcre\.vscode\projects\MyProjects\WMS_V2\obj\Debug\net10.0\ref\WMS_V2.dll
+C:\Users\ehcre\.vscode\projects\MyProjects\WMS_V2\obj\Debug\net10.0\WMS_V2.sourcelink.json

@@ -25,8 +25,8 @@ class SurgeTable
 
         foreach (var surge in surges)
         {
-            if ((types.Count == 0 || types.Contains(surge.Type)) &&
-                (powers.Count == 0 || powers.Contains(surge.Power)))
+            if ((types.Count == 0 || types.Contains(surge.GetType())) &&
+                (powers.Count == 0 || powers.Contains(surge.GetPower())))
             {
                 result.Add(surge);
             }

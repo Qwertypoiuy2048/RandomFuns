@@ -8,9 +8,6 @@ abstract class Surge
     protected int _power;
     protected string _description;
 
-    public char Type => type;
-    public int Power => power;
-
     public Surge(int id, char type, int power, string description)
     {
         _id = id;
@@ -20,4 +17,6 @@ abstract class Surge
     }
 
     public abstract void Display();
+    public int GetPower() { return _power; }
+    public char GetType() { return _type; }
 }
