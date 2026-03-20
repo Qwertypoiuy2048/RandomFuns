@@ -1,137 +1,153 @@
 ﻿class Program
-{
-    static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        static void Main(string[] args)
+        {
+            CSVLoader loader = new CSVLoader();
+            List<Surge> surges = loader.LoadCSV("surges.csv");
 
-        string path = "C:\\Users\\ehcre\\.vscode\\projects\\MyProjects\\WMS.csv"; // Update this path to where your CSV file is located
-        int num_of_possible_surges = 456; // Update this if you add more surges to the CSV file
+            SurgeTable table = new SurgeTable(surges);
+            SurgeManager manager = new SurgeManager(table);
+            Caster caster = new Caster();
+            ConsoleMenu menu = new ConsoleMenu(manager, caster);
 
-        List<int> H_Surges = new List<int>();
-        List<int> V_Surges = new List<int>();
-        List<int> B_Surges = new List<int>();
+            menu.ShowMenu();
+        }
+    }
 
-        List<int> S1_Surges = new List<int>();
-        List<int> S2_Surges = new List<int>();
-        List<int> S3_Surges = new List<int>();
-        List<int> S4_Surges = new List<int>();
+// class Program
+// {
+//     static void Main(string[] args)
+//     {
+//         Console.WriteLine("Hello, World!");
+
+//         string path = "C:\\Users\\ehcre\\.vscode\\projects\\MyProjects\\WMS.csv"; // Update this path to where your CSV file is located
+//         int num_of_possible_surges = 456; // Update this if you add more surges to the CSV file
+
+//         List<int> H_Surges = new List<int>();
+//         List<int> V_Surges = new List<int>();
+//         List<int> B_Surges = new List<int>();
+
+//         List<int> S1_Surges = new List<int>();
+//         List<int> S2_Surges = new List<int>();
+//         List<int> S3_Surges = new List<int>();
+//         List<int> S4_Surges = new List<int>();
         
 
-        int round = 0;
+//         int round = 0;
 
-        void readCSV(string filename)
-        {
-            Console.WriteLine($"Reading surge results from {filename}...");
-            try
-            {
-                using (StreamReader sr = new StreamReader(filename))
-                {
-                    string line;
-                    int lineNumber = 1;
-                    while ((line = sr.ReadLine()) != null)
-                    {
-                        Console.WriteLine(line); 
-                        string[] parts = line.Split(',');
-                        if (parts.Length != 3)
-                        {
-                            Console.WriteLine($"Invalid line format at line {lineNumber}. Skipping.");
-                            continue;
-                        } else
-                        {
-                            char severity = parts[0][0];
-                            char type = parts[1][0];
-                            string description = parts[2];
-                            Surge surge = new Surge(severity, type, description, lineNumber);
-                            if (severity == 'H')
-                            {
-                                H_Surges.Add(lineNumber);
-                            } else if (severity == 'V')
-                            {
-                                V_Surges.Add(lineNumber);
-                            } else if (severity == 'B')
-                            {
-                                B_Surges.Add(lineNumber);
-                            }
+//         void readCSV(string filename)
+//         {
+//             Console.WriteLine($"Reading surge results from {filename}...");
+//             try
+//             {
+//                 using (StreamReader sr = new StreamReader(filename))
+//                 {
+//                     string line;
+//                     int lineNumber = 1;
+//                     while ((line = sr.ReadLine()) != null)
+//                     {
+//                         Console.WriteLine(line); 
+//                         string[] parts = line.Split(',');
+//                         if (parts.Length != 3)
+//                         {
+//                             Console.WriteLine($"Invalid line format at line {lineNumber}. Skipping.");
+//                             continue;
+//                         } else
+//                         {
+//                             char severity = parts[0][0];
+//                             char type = parts[1][0];
+//                             string description = parts[2];
+//                             Surge surge = new Surge(severity, type, description, lineNumber);
+//                             if (severity == 'H')
+//                             {
+//                                 H_Surges.Add(lineNumber);
+//                             } else if (severity == 'V')
+//                             {
+//                                 V_Surges.Add(lineNumber);
+//                             } else if (severity == 'B')
+//                             {
+//                                 B_Surges.Add(lineNumber);
+//                             }
 
-                            if (type == '1')
-                            {
-                                S1_Surges.Add(lineNumber);
-                            } else if (type == '2')
-                            {
-                                S2_Surges.Add(lineNumber);
-                            } else if (type == '3')
-                            {
-                                S3_Surges.Add(lineNumber);
-                            } else if (type == '4')
-                            {
-                                S4_Surges.Add(lineNumber);
-                            }
-                        }
-                        lineNumber++;
-                    }
-                }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine($"Could not open file {filename}");
-                Console.WriteLine($"Please place a valid CSV file at '{path}'");
-                Console.Write("Please confirm [y/n]: ");
-                string response = Console.ReadLine();
-                if (response.ToLower() == "y")
-                {
-                    readCSV(filename); // Try reading the file again
-                }
-                else
-                {
-                    Environment.Exit(0);
-                }
-            }
-        }
+//                             if (type == '1')
+//                             {
+//                                 S1_Surges.Add(lineNumber);
+//                             } else if (type == '2')
+//                             {
+//                                 S2_Surges.Add(lineNumber);
+//                             } else if (type == '3')
+//                             {
+//                                 S3_Surges.Add(lineNumber);
+//                             } else if (type == '4')
+//                             {
+//                                 S4_Surges.Add(lineNumber);
+//                             }
+//                         }
+//                         lineNumber++;
+//                     }
+//                 }
+//             }
+//             catch (Exception e)
+//             {
+//                 Console.WriteLine($"Could not open file {filename}");
+//                 Console.WriteLine($"Please place a valid CSV file at '{path}'");
+//                 Console.Write("Please confirm [y/n]: ");
+//                 string response = Console.ReadLine();
+//                 if (response.ToLower() == "y")
+//                 {
+//                     readCSV(filename); // Try reading the file again
+//                 }
+//                 else
+//                 {
+//                     Environment.Exit(0);
+//                 }
+//             }
+//         }
 
-        while (true)
-        {
-            Console.WriteLine("Menu:");
-            Console.WriteLine("1. Cast spell");
-            Console.WriteLine("2. Force surge");
-            Console.WriteLine("3. Reset used slots");
-            Console.WriteLine("4. Force surge by type");
-            Console.WriteLine("5. Increment round");
-            Console.WriteLine("0. Quit");
-            Console.Write("Enter your choice: ");
-            int choice = int.Parse(Console.ReadLine());
+//         while (true)
+//         {
+//             Console.WriteLine("Menu:");
+//             Console.WriteLine("1. Cast spell");
+//             Console.WriteLine("2. Force surge");
+//             Console.WriteLine("3. Reset used slots");
+//             Console.WriteLine("4. Force surge by type");
+//             Console.WriteLine("5. Increment round");
+//             Console.WriteLine("0. Quit");
+//             Console.Write("Enter your choice: ");
+//             int choice = int.Parse(Console.ReadLine());
 
-            switch (choice)
-            {
-                case 0:
-                    Console.WriteLine("Thank you for using my program!");
-                    return;
-                case 1:
-                    // Implement casting spell logic here
-                    break;
-                case 2:
-                    // Implement force surge logic here
-                    break;
-                case 3:
-                    // Implement reset used slots logic here
-                    break;
-                case 4:
-                    // Implement force surge by type logic here
-                    break;
-                case 5:
-                    // Implement increment round logic here
-                    Console.WriteLine("Was there a surge this round? (y/n): ");
-                    string surgeThisRound = Console.ReadLine();
-                    if (surgeThisRound == "y")
-                    {
-                        // Reset slots used
-                    }
-                    // Increment round counter
-                    break;
-                default:
-                    Console.WriteLine("Invalid choice. Please try again.");
-                    break;
-            }
-        }
+//             switch (choice)
+//             {
+//                 case 0:
+//                     Console.WriteLine("Thank you for using my program!");
+//                     return;
+//                 case 1:
+//                     // Implement casting spell logic here
+//                     break;
+//                 case 2:
+//                     // Implement force surge logic here
+//                     break;
+//                 case 3:
+//                     // Implement reset used slots logic here
+//                     break;
+//                 case 4:
+//                     // Implement force surge by type logic here
+//                     break;
+//                 case 5:
+//                     // Implement increment round logic here
+//                     Console.WriteLine("Was there a surge this round? (y/n): ");
+//                     string surgeThisRound = Console.ReadLine();
+//                     if (surgeThisRound == "y")
+//                     {
+//                         // Reset slots used
+//                     }
+//                     // Increment round counter
+//                     break;
+//                 default:
+//                     Console.WriteLine("Invalid choice. Please try again.");
+//                     break;
+//             }
+//         }
 
         // void printSurgeResult(int i,struct surgeResult surge, char* buffer) {
         //     sprintf(buffer, "\n\nLine: %d \nSeverity: %c \nType: %c \nDescription: \n%s",i, surge.Type, surge.Severity, surge.Description);
@@ -327,5 +343,5 @@
         //         }
         //     }
         // }
-    }
-}
+//     }
+// }

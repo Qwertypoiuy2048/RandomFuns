@@ -1,0 +1,87 @@
+@startuml WMS
+scale 2
+
+
+' ===== Core Classes =====
+class Program {
+    +Main() : void
+}
+
+class ConsoleMenu {
+    -manager : SurgeManager
+    -caster : Caster
+    +ShowMenu() : void
+    +HandleInput() : void
+}
+
+class SurgeManager {
+    -surges : SurgeTable
+    -history : List<Surge>
+    -types : List<char>
+    -powers : List<int>
+    +GetSurge() : Surge
+    +GetFilteredSurge(types, powers) : Surge
+}
+
+class SurgeTable {
+    -surges : List<Surge>
+    +GetSurge() : Surge
+    +FilterSurge(type : char, power : int) : List<Surge>
+}
+
+abstract class Surge {
+    -id : int
+    -type : char
+    -power : int
+    -description : string
+    +Display() : void
+}
+
+class ConstantSurge {
+    +Display() : void
+}
+
+class RollableSurge {
+    -diceType : int
+    -diceNum : int
+    -bonus : int
+    +Roll() : int
+    +Display() : void
+}
+
+class Caster {
+    -triggerLevel : int
+    +CastSpell(level : int) : bool
+    +Reset() : void
+}
+
+class DiceRoller {
+    -random : Random
+    +RollD20() : int
+    +Roll(num : int, sides : int) : int
+    +Select(max : int) : int
+}
+
+class CSVLoader {
+    +LoadCSV(path : string) : List<Surge>
+}
+
+' ===== Relationships =====
+Program --> ConsoleMenu
+
+ConsoleMenu --> SurgeManager
+ConsoleMenu --> Caster
+
+SurgeManager --> SurgeTable
+SurgeManager --> DiceRoller
+
+SurgeTable --> Surge
+
+CSVLoader --> SurgeTable
+
+Caster --> DiceRoller
+
+Surge <|-- ConstantSurge
+Surge <|-- RollableSurge
+
+@enduml

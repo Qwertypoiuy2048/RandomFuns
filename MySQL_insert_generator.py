@@ -1,41 +1,23 @@
 # ===== PASTE YOUR DATA HERE =====
-RAW_DATA = """
- artwork_id|keyword_id
+RAW_DATA = \
+"""
+term_year| term| course section faculty_fname faculty_lname capacity
 
-  
- 1  | 2
- 2  | 1
- 2  | 10
- 3  | 2
- 4  | 4
- 4  | 7
- 4  | 3
- 5  | 5
- 5  | 9
- 5  | 7
- 5  | 6
- 6  | 4
- 6  | 7
- 7  | 8
- 7  | 7
- 7  | 6
- 8  | 4
- 8  | 7
- 9  | 9
- 9  | 10
- 10 | 10
- 11 | 9
- 11 | 7
- 11 | 11
- 12 | 10
- 12 | 7
- 12 | 2
- 13 | 1
- 13 | 7
+2019| Fall| CIT| 111| 1| Marty| Morring| 30
+2019| Fall| ECON| 150| 1| Nate| Norris| 50
+2019| Fall| ECON| 150| 2| Nate| Norris| 50
+2019| Fall| ECON| 388| 1| Ben| Barrus| 35
+2019| Fall| HUM| 376| 1| John| Jensen| 30
+2018| Winter| CIT| 111| 2| Marty| Morring| 30
+2018| Winter| CIT| 111| 3| Bill| Barney| 35
+2018| Winter| ECON| 150| 1| Nate| Norris| 50
+2018| Winter| ECON| 150| 2| Nate| Norris| 50
+2018| Winter| HUM| 376| 1| John| Jensen| 30
 """
 
-TABLE_NAME = "artwork_has_keyword"
-SKIP_LINES = []
+TABLE_NAME = "course"
+SKIP_LINES = [0,1]
+
 
 # =============================================
 

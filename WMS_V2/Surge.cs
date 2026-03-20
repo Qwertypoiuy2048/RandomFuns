@@ -1,15 +1,23 @@
-public class Surge
+// =========================
+// Abstract Surge
+// =========================
+abstract class Surge
 {
-    public char _severity;
-    public char _type;
-    public string _description;
-    public int _line;
+    protected int _id;
+    protected char _type;
+    protected int _power;
+    protected string _description;
 
-    public Surge(char severity, char type, string description, int line)
+    public char Type => type;
+    public int Power => power;
+
+    public Surge(int id, char type, int power, string description)
     {
-        _severity = severity;
+        _id = id;
         _type = type;
+        _power = power;
         _description = description;
-        _line = line;
     }
+
+    public abstract void Display();
 }
