@@ -17,12 +17,14 @@ class Caster
         int roll = dice.RollD20();
         int threshold = level + triggerLevel;
 
-        Console.WriteLine($"Roll: {roll}, Threshold: {threshold}");
+        Console.WriteLine($"\nRoll: {roll}, Threshold: {threshold}");
 
         if (roll <= threshold)
         {
+            Console.WriteLine("Surge triggered!");
             return true;
         }
+        Console.WriteLine("No surge triggered");
 
         triggerLevel += level;
         return false;

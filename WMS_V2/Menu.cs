@@ -1,15 +1,15 @@
 // =========================
 // Console Menu
 // =========================
-class ConsoleMenu
+class Menu
 {
-    private SurgeManager manager;
-    private Caster caster;
+    private SurgeManager _manager;
+    private Caster _caster;
 
-    public ConsoleMenu(SurgeManager manager, Caster caster)
+    public Menu(SurgeManager manager, Caster caster)
     {
-        manager = manager;
-        caster = caster;
+        _manager = manager;
+        _caster = caster;
     }
 
     public void StartMenu()
@@ -22,6 +22,7 @@ class ConsoleMenu
             Console.WriteLine("2. Manual surge");
             Console.WriteLine("3. Reset cast spells");
             Console.WriteLine("0. Exit");
+            Console.Write("\nSelect an option: ");
 
             string input = Console.ReadLine();
 
@@ -37,7 +38,7 @@ class ConsoleMenu
                     HandleManualSurge();
                     break;
                 case "3":
-                    caster.Reset();
+                    _caster.Reset();
                     break;
                 default:
                     Console.WriteLine("Please enter a number on the list.");
@@ -46,30 +47,33 @@ class ConsoleMenu
         }
     }
 
-    public void HandleInput()
-    {
-        // Optional: separate input handling if needed
-    }
-
     private void HandleCastSpell()
     {
         Console.Write("Enter spell level: ");
-        int level = int.Parse(Console.ReadLine());
+        string input = Console.ReadLine();
+        int level;
+        if (int.TryParse(input, out int Input)) {level = Input;} else {level = 1;}
 
-        bool triggered = caster.CastSpell(level);
+        bool triggered = _caster.CastSpell(level);
 
         if (triggered)
         {
-            Surge surge = manager.GetSurge();
+            Surge surge = _manager.GetSurge();
             surge.Display();
-            caster.Reset();
+            _caster.Reset();
         }
     }
 
     private void HandleManualSurge()
     {
         // TODO: Ask for type/power filters
-        Surge surge = manager.GetFilteredSurge(new List<char>(), new List<int>());
+        Console.Write("What Types? (B, V, H): ");
+        List<char> types = Console.ReadLine().ToCharArray().ToList();
+
+        Console.Write("What Powers? (1, 2, 3, 4): ");
+        List<int> powers = Console.ReadLine().Split(' ').Select(int.Parse).ToList();
+
+        Surge surge = _manager.GetFilteredSurge(types, powers);
         surge.Display();
     }
 }

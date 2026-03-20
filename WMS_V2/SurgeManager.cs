@@ -1,39 +1,43 @@
 // =========================
 // Surge Manager
 // =========================
+using System.Reflection.Metadata;
+
 class SurgeManager
 {
-    private SurgeTable surges;
-    private List<Surge> history;
-    private List<char> types;
-    private List<int> powers;
+    private SurgeTable _surges;
+    private List<Surge> _history;
+    private List<char> _types;
+    private List<int> _powers;
+    private Constant _default; 
 
     public SurgeManager(SurgeTable table)
     {
-        surges = table;
-        history = new List<Surge>();
-        types = new List<char> {'B', 'V', 'H'};
-        powers = new List<int> {1,2,3,4};
+        _surges = table;
+        _history = new List<Surge>();
+        _types = new List<char> {'B', 'V', 'H'};
+        _powers = new List<int> {1,2,3,4};
+        _default = new Constant(0, 'B', 1, "No surges were found. Please try again.");
     }
 
     public Surge GetSurge()
     {
-        Surge surge = surges.GetSurge();
-        history.Add(surge);
+        Surge surge = _surges.GetSurge();
+        _history.Add(surge);
         return surge;
     }
 
     public Surge GetFilteredSurge(List<char> types, List<int> powers)
     {
-        List<Surge> filtered = surges.FilterSurge(types, powers);
+        List<Surge> filtered = _surges.FilterSurge(types, powers);
 
         if (filtered.Count == 0)
-            return null;
+            return _default;
 
         Random rand = new Random();
         Surge surge = filtered[rand.Next(filtered.Count)];
 
-        history.Add(surge);
+        _history.Add(surge);
         return surge;
     }
 }

@@ -17,6 +17,6 @@ abstract class Surge
     }
 
     public abstract void Display();
-    public int GetPower() { return _power; }
-    public char GetType() { return _type; }
+    public int Power() { return _power; }
+    public char Type() { return _type; }
 }

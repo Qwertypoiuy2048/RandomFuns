@@ -12,7 +12,7 @@
         SurgeTable table = new SurgeTable(surges);
         SurgeManager manager = new SurgeManager(table);
         Caster caster = new Caster();
-        ConsoleMenu menu = new ConsoleMenu(manager, caster);
+        Menu menu = new Menu(manager, caster);
 
         menu.StartMenu();
     }
@@ -20,7 +20,6 @@
 
 
 /*
-
 
 Status: Runs with errors
 
@@ -34,6 +33,6 @@ Menu -WIP
 Rollable - Functioning
 Surge - Functioning
 SurgeManager - WIP
-SurgeTable -WIP
+SurgeTable - Mock
 
 */
