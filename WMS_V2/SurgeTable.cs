@@ -15,6 +15,7 @@ class SurgeTable
     public Surge GetSurge()
     {
         int index = dice.Select(surges.Count);
+        // TODO: ask if good
         return surges[index];
     }
 

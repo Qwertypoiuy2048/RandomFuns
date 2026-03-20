@@ -3,19 +3,19 @@
 // =========================
 class Rollable : Surge
 {
-    private int diceType;
-    private int diceNum;
-    private int bonus;
-    private DiceRoller dice;
+    private int _diceType;
+    private int _diceNum;
+    private int _bonus;
+    private DiceRoller _dice;
 
     public Rollable(int id, char type, int power, string description,
                             int diceNum, int diceType, int bonus)
         : base(id, type, power, description)
     {
-        this.diceNum = diceNum;
-        this.diceType = diceType;
-        this.bonus = bonus;
-        this.dice = new DiceRoller();
+        _diceNum = diceNum;
+        _diceType = diceType;
+        _bonus = bonus;
+        _dice = new DiceRoller();
     }
 
     public int Roll()
@@ -25,7 +25,9 @@ class Rollable : Surge
 
     public override void Display()
     {
+        Console.WriteLine($"\nLine num: {_id}\nType: {_type}\nSeverity: {_power}\n{_description}");
+        
         int result = Roll();
-        Console.WriteLine($"{description} (Rolled: {result})");
+        Console.WriteLine($"(Rolled: {result})\n\n");
     }
 }

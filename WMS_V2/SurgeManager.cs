@@ -12,8 +12,8 @@ class SurgeManager
     {
         surges = table;
         history = new List<Surge>();
-        types = new List<char>();
-        powers = new List<int>();
+        types = new List<char> {'B', 'V', 'H'};
+        powers = new List<int> {1,2,3,4};
     }
 
     public Surge GetSurge()
@@ -37,3 +37,4 @@ class SurgeManager
         return surge;
     }
 }
+

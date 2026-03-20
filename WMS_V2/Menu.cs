@@ -8,24 +8,28 @@ class ConsoleMenu
 
     public ConsoleMenu(SurgeManager manager, Caster caster)
     {
-        this.manager = manager;
-        this.caster = caster;
+        manager = manager;
+        caster = caster;
     }
 
-    public void ShowMenu()
+    public void StartMenu()
     {
         bool running = true;
 
         while (running)
         {
-            Console.WriteLine("\n1. Cast Spell");
-            Console.WriteLine("2. Manual Surge");
-            Console.WriteLine("3. Exit");
+            Console.WriteLine("\n1. Cast spell");
+            Console.WriteLine("2. Manual surge");
+            Console.WriteLine("3. Reset cast spells");
+            Console.WriteLine("0. Exit");
 
             string input = Console.ReadLine();
 
             switch (input)
             {
+                case "0":
+                    running = false;
+                    break;
                 case "1":
                     HandleCastSpell();
                     break;
@@ -33,7 +37,10 @@ class ConsoleMenu
                     HandleManualSurge();
                     break;
                 case "3":
-                    running = false;
+                    caster.Reset();
+                    break;
+                default:
+                    Console.WriteLine("Please enter a number on the list.");
                     break;
             }
         }
