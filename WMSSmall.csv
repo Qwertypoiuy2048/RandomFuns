@@ -1,0 +1,12 @@
+V,1,For 1d6 hours faint musical chimes sound when the triggering creature or any creature within 5 feet moves.
+V,2,For 1d8 rounds whenever a creature within 15 feet speaks a harmless frog pops out of their mouth and lands nearby.
+V,3,For 3 rounds 1d4 random creatures within 30 feet become invisible.
+V,4,A CR 5 magical beast appears within 30 feet and immediately attacks the nearest creature. It remains for 3d6 rounds.
+B,1,For 1d6 hours clothing worn by creatures within 10 feet subtly writhes. Once during this duration the clothing may impose disadvantage on one grapple attempt against its wearer.
+B,2,The triggering creature sheds a thin outer layer harmlessly and gains 10 temporary HP.
+B,3,For 1d4 rounds the triggering creature gains resistance to bludgeoning piercing and slashing damage but their speed is halved.
+B,4,The creature and all allies within 60 feet gain the benefits of a Long Rest instantly.
+H,1,For 1d10 rounds the triggering creature speaks in reverse order. All creatures must succeed on a DC 12 Insight check to understand them.
+H,2,The triggering creature becomes ethereal for 1d4 rounds. During this time they can move through objects and creatures but cannot interact with the material world in any way.
+H,3,For 3 rounds 1d4 random enemies within 30 feet become invisible.
+H,4,A CR 7 creature appears within 30 ft and immediately attacks the triggering creature.
